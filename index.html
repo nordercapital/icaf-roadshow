@@ -215,8 +215,8 @@ footer.norder .wrap{padding-block:0}
     <div class="panel">
       <h2>Conversion funnel</h2>
       <div class="fun" id="funnel"></div>
-      <div class="legend"><span><i class="sa"></i>Active</span><span><i class="sh"></i>On hold</span><span><i class="sx"></i>Declined (<span id="dcount"></span>)</span><span><i class="nowk"></i>Names at this stage today (active or on hold)</span></div>
-      <p class="note">Bars are cumulative: each stage counts everyone who reached it or went beyond, including those who later declined. Inside each bar, the light-blue tag shows how many active or on-hold names are at that stage today; the numbers in the on-hold and declined segments count those names cumulatively, like the bar.</p>
+      <div class="legend"><span><i class="sa"></i>Active</span><span><i class="sh"></i>On hold</span><span><i class="sx"></i>Declined (<span id="dcount"></span>)</span><span><i class="nowk"></i>Active names at this stage today</span></div>
+      <p class="note">Bars are cumulative: each stage counts everyone who reached it or went beyond, including those who later declined. Inside each bar, the light-blue tag shows how many active names are at that stage today; the numbers in the on-hold and declined segments count those names cumulatively, like the bar.</p>
     </div>
     <div class="panel">
       <h2>Investor profile</h2>
@@ -265,62 +265,62 @@ const ETAPA_DESC=["","No feedback yet","Under review","Scheduled / being schedul
 const B=s=>s<=1?1:s===2?2:(s===3||s===5)?3:(s===4||s===6)?4:5;
 // [name, profile, sub-profile, CRM stage, status A=active H=on hold X=declined, interest, NDA, flags, next step / feedback, decline reason]
 const RAW=[
-["Itaú Asset","Bank","Bank asset manager",7,"A","LP,Co-invest","NDA being signed","","Finalize NDA signing and open the data room. Main focus is direct co-investment; assessing an LP commitment in light of the Canadian anchor."],
-["KVIV Ventures","Asset manager","Venture capital",7,"A","LP,Co-invest","NDA under review","","Awaiting Caetano's comments on the NDA template we sent."],
+["Itaú Asset","Bank","Bank / asset manager",7,"A","LP,Co-invest","NDA being signed","","Finalize NDA signing and open the data room. Main focus is direct co-investment; assessing an LP commitment in light of the Canadian anchor."],
+["KVIV Ventures","Family office / wealth","Single-family office",7,"A","LP,Co-invest","NDA under review","","Awaiting Caetano's comments on the NDA template we sent."],
 ["Finep","Development / DFI","Development agency",7,"H","LP","NDA not sent","BR",""],
 ["Desenvolve SP","Development / DFI","Development agency",7,"A","LP","NDA under review","BR","Apply to the call for proposals (submission end of November). NDA only after the first round, about 3 months later."],
 ["BNDES","Development / DFI","Development bank",7,"A","LP,Co-invest","NDA under review","BR","New meeting with Pimpão: awaiting proposed dates."],
-["BTG Pactual","Bank","Bank",6,"A","LP,Co-invest","NDA not sent","","Re-engaging through a new route: WhatsApp sent to Luiz Medeiros (fund-of-funds team) on Nov 12."],
-["Banco do Brasil","Bank","Bank",6,"A","LP,Co-invest","NDA not sent","","Re-engaging through Victor Granja, our contact on the fund-evaluation team."],
-["Galapagos Capital","Asset manager","Private equity",6,"A","LP","NDA not sent","","LP: materials with the fund-investment team for review. Follow up with the Paraguayan partner referred for co-investment."],
+["BTG Pactual","Bank","Bank / asset manager",6,"A","LP,Co-invest","NDA not sent","","Re-engaging through a new route: WhatsApp sent to Luiz Medeiros (fund-of-funds team) on Nov 12."],
+["Banco do Brasil","Bank","Bank / asset manager",6,"A","LP,Co-invest","NDA not sent","","Re-engaging through Victor Granja, our contact on the fund-evaluation team."],
+["Galapagos Capital","Asset manager","Asset manager",6,"A","LP","NDA not sent","","LP: materials with the fund-investment team for review. Follow up with the Paraguayan partner referred for co-investment."],
 ["Ecoa Capital","Family office / wealth","Single-family office",5,"A","LP","","","Meeting with Deetken on Nov 12."],
 ["TAG Investimentos","Family office / wealth","Multi-family office",3,"A","LP,Co-invest","","","Meeting scheduled for Nov 12."],
 ["Família Brennand","Family office / wealth","Single-family office",3,"A","LP,Co-invest","","","Awaiting Antonio Brennand's feedback to schedule."],
 ["EQI Investimentos","Asset manager","Asset manager",2,"A","LP","","","Materials sent. Followed up with Ettore on WhatsApp on Nov 11; awaiting feedback."],
-["Santander Brasil","Bank","Bank",2,"A","LP","","","Materials sent. Awaiting feedback."],
+["Santander Brasil","Bank","Bank / asset manager",2,"A","LP","","","Materials sent. Awaiting feedback."],
 ["Carpa Family Office","Family office / wealth","Multi-family office",2,"A","LP","","","Materials sent. Awaiting feedback."],
-["Picoró Investimentos","Family office / wealth","Family office",3,"A","LP,Co-invest","","","Scheduling a call with Luquinhas."],
-["Legend Capital","Asset manager","Private equity",1,"A","LP","","","Reaching out in parallel to Luiz, Túlio, Guilherme and Pedro by email."],
-["BDMG","Development / DFI","Development bank",1,"A","LP","","","First follow-up with Jorge."],
-["Enseada","Family office / wealth","Family office",1,"A","LP","","","First follow-up with João."],
-["WE Capital","Asset manager","Private equity",1,"A","LP","","","First follow-up with Caio, awaiting reply."],
+["Picoró Investimentos","Family office / wealth","Single-family office",3,"A","LP,Co-invest","","","Scheduling a call with Luquinhas."],
+["Legend Capital","Asset manager","Asset manager",1,"A","LP","","","Reaching out in parallel to Luiz, Túlio, Guilherme and Pedro by email."],
+["BDMG","Bank","Development bank",1,"A","LP","","","First follow-up with Jorge."],
+["Enseada","Family office / wealth","Multi-family office",1,"A","LP","","","First follow-up with João."],
+["WE Capital","Family office / wealth","Multi-family office",1,"A","LP","","","First follow-up with Caio, awaiting reply."],
 ["Pragma","Family office / wealth","Multi-family office",1,"A","LP","","","Follow-up with Cella by email."],
 ["Perfin","Asset manager","Asset manager",1,"A","LP","","","Reaching out to Cesar and Gaspar by email and WhatsApp."],
 ["JGP","Asset manager","Asset manager",1,"A","LP","","","Reached out to Urbano and Maria, awaiting reply."],
-["Aguassanta Participações","Family office / wealth","Single-family office",1,"A","LP","","","First follow-up with Sylvio, awaiting reply."],
+["Aguassanta Participações","Asset manager","Asset manager",1,"A","LP","","","First follow-up with Sylvio, awaiting reply."],
 ["Turim FO","Family office / wealth","Multi-family office",1,"A","LP","","","First follow-up with Carol and outreach to Eduardo."],
-["M Square","Asset manager","Asset manager",1,"A","LP","","","Follow-up with Victor on WhatsApp, awaiting reply."],
-["Brainvest Brasil","Family office / wealth","Multi-family office",1,"A","LP,Co-invest","","","Follow-up with Dennis on WhatsApp, awaiting reply."],
+["M Square","Family office / wealth","Multi-family office",1,"A","LP","","","Follow-up with Victor on WhatsApp, awaiting reply."],
+["Brainvest Brasil","Asset manager","Asset manager",1,"A","LP,Co-invest","","","Follow-up with Dennis on WhatsApp, awaiting reply."],
 ["Oikos Wealth Management","Family office / wealth","Multi-family office",1,"A","LP,Co-invest","","","Follow-up with Hugo on WhatsApp, awaiting reply."],
 ["Portofino MFO","Family office / wealth","Multi-family office",1,"A","LP","","","Talking directly with Carolina (head), who will bring in João and the investment team."],
 ["4UM Investimentos","Family office / wealth","Multi-family office",1,"A","LP","","","Reaching out to Érico by email."],
 // on hold
 ["XP Asset","Asset manager","Asset manager",6,"H","LP","","",""],
-["Bradesco Asset Management","Bank","Bank asset manager",6,"H","LP,Co-invest","","BR",""],
+["Bradesco Asset Management","Bank","Bank / asset manager",6,"H","LP,Co-invest","","BR",""],
 ["Gerval (FO Gerdau)","Family office / wealth","Single-family office",6,"H","LP","","BR",""],
 ["Cadonau (Jereissati)","Family office / wealth","Single-family office",5,"H","LP,Co-invest","","",""],
-["ekho","Family office / wealth","Family office",1,"H","LP,Co-invest","","",""],
+["ekho","Family office / wealth","Multi-family office",1,"H","LP,Co-invest","","",""],
 // declined
 ["Maubisa","Family office / wealth","Single-family office",2,"X","LP,Co-invest","","","","timing"],
-["Pachamama Investimentos","Asset manager","Asset manager",2,"X","LP,Co-invest","","","","timing"],
-["Badesul","Development / DFI","Development agency",6,"X","LP","","FT,BR","","mandato"],
-["Jera Capital","Asset manager","Private equity",2,"X","","","","","mandato"],
+["Pachamama Investimentos","Family office / wealth","Single-family office",2,"X","LP,Co-invest","","","","timing"],
+["Badesul","Bank","Development bank",6,"X","LP","","FT,BR","","mandato"],
+["Jera Capital","Asset manager","Asset manager",2,"X","","","","","mandato"],
 ["Genial Investimentos","Asset manager","Asset manager",2,"X","","","","","mandato"],
 ["Safra","Bank","Bank",2,"X","","","","","mandato"],
 ["Minerva Foods","Corporate","Corporate",2,"X","","","","","impacto"],
 ["UV Gestora","Family office / wealth","Single-family office",2,"X","LP","","","","geo"],
 ["BWGI","Asset manager","Asset manager",2,"X","LP","","","","mandato"],
 ["Anima Investimentos","Asset manager","Asset manager",2,"X","LP","","","","mandato"],
-["Monte Bravo","Family office / wealth","Investment advisory",2,"X","LP,Co-invest","","","","impacto"],
-["Spectra Investments","Asset manager","Private equity",2,"X","","","","","mandato"],
+["Monte Bravo","Asset manager","Asset manager",2,"X","LP,Co-invest","","","","impacto"],
+["Spectra Investments","Asset manager","Fund of funds",2,"X","","","","","mandato"],
 ["Nau Capital","Family office / wealth","Multi-family office",2,"X","LP,Co-invest","","","","mandato"],
 ["Sun Moritz Family Office","Family office / wealth","Single-family office",2,"X","Co-invest","","","","mandato"],
-["Prada Assessoria","Family office / wealth","Investment advisory",2,"X","Co-invest","","","","impacto"],
-["Signal Capital","Asset manager","Private equity",2,"X","LP,Co-invest","","","","timing"],
+["Prada Assessoria","Family office / wealth","Multi-family office",2,"X","Co-invest","","","","impacto"],
+["Signal Capital","Asset manager","Asset manager",2,"X","LP,Co-invest","","","","timing"],
 ["Monte Azul MFO","Family office / wealth","Multi-family office",2,"X","LP,Co-invest","","BR","","demanda"],
-["Fundo JBS pela Amazônia","Corporate","Foundation",2,"X","LP,Co-invest","","","","timing"],
-["Globo Ventures","Corporate","Corporate venture",2,"X","LP,Co-invest","","","","timing"],
-["Península Participações","Family office / wealth","Single-family office",2,"X","LP,Co-invest","","","","impacto"],
+["Fundo JBS pela Amazônia","Corporate","Foundation / fund of funds",2,"X","LP,Co-invest","","","","timing"],
+["Globo Ventures","Family office / wealth","Single-family office",2,"X","LP,Co-invest","","","","timing"],
+["Península Participações","Family office / wealth","Multi-family office",2,"X","LP,Co-invest","","","","impacto"],
 ];
 const D=RAW.map(r=>({n:r[0],cat:r[1],sub:r[2],s:r[3],st:r[4],a:r[4]==="A",int:r[5]?r[5].split(","):[],nda:r[6],ft:r[7].includes("FT"),br:r[7].includes("BR"),next:r[8],mot:r[9]||""}));
 
@@ -337,8 +337,8 @@ $("kpis").innerHTML=k.map(([v,l],i)=>`<div class="kpi"><span class="kt">${l}</sp
 
 // Funnel (cumulative)
 $("funnel").innerHTML=[1,2,3,4,5].map(s=>{const c=L=>L.filter(x=>B(x.s)>=s).length;const a=c(active),h=c(hold),x=c(decl);
- const cur=D.filter(y=>y.st!=="X"&&B(y.s)===s).length;
- return `<div class="frow"><div class="lab">${ETAPAS[s]}<small>${ETAPA_DESC[s]}</small></div><div class="bar fb" role="img" aria-label="${ETAPAS[s]}: ${a} active, ${h} on hold, ${x} declined; ${cur} at this stage today"><span class="now">${cur}</span>${a?`<i class="sa" style="width:${a/N*100}%"></i>`:""}${h?`<i class="sh" style="width:${h/N*100}%"><em>${h}</em></i>`:""}${x?`<i class="sx" style="width:${x/N*100}%"><em>${x}</em></i>`:""}</div><div class="n">${a+h+x}</div></div>`}).join("");
+ const cur=D.filter(y=>y.st==="A"&&B(y.s)===s).length;
+ return `<div class="frow"><div class="lab">${ETAPAS[s]}<small>${ETAPA_DESC[s]}</small></div><div class="bar fb" role="img" aria-label="${ETAPAS[s]}: ${a} active, ${h} on hold, ${x} declined; ${cur} active at this stage today"><span class="now">${cur}</span>${a?`<i class="sa" style="width:${a/N*100}%"></i>`:""}${h?`<i class="sh" style="width:${h/N*100}%"><em>${h}</em></i>`:""}${x?`<i class="sx" style="width:${x/N*100}%"><em>${x}</em></i>`:""}</div><div class="n">${a+h+x}</div></div>`}).join("");
 const live=D.filter(x=>x.st!=="X");$("dcount").textContent=decl.length;
 
 
@@ -346,11 +346,11 @@ const live=D.filter(x=>x.st!=="X");$("dcount").textContent=decl.length;
 const cats=["Development / DFI","Bank","Asset manager","Family office / wealth","Corporate"];
 const CATL={"Development / DFI":"Development / DFI","Bank":"Banks","Asset manager":"Asset managers","Family office / wealth":"Family offices / wealth","Corporate":"Corporates"};
 const LEIT={
- "Development / DFI":"Most advanced profile: 3 of 5 reached advanced review. Desenvolve SP and BNDES are moving; Finep is on hold with no budget for 2026.",
- "Bank":"4 of 6 reached a meeting. BTG and Banco do Brasil are being re-engaged through new contacts; only Safra declined. Itaú is moving through the NDA.",
- "Asset manager":"Accounts for most mandate-related declines (5 of 9). More than half of the active names are still at first contact.",
- "Family office / wealth":"Largest group in the roadshow, with most active names still early in the funnel.",
- "Corporate":"All three declined: impact out of scope or timing."};
+ "Development / DFI":"All 3 reached advanced review. Desenvolve SP and BNDES are moving; Finep is on hold with no budget for 2026.",
+ "Bank":"5 of 8 reached a meeting or beyond. Itaú is in NDA; BTG and Banco do Brasil are being re-engaged. Safra and Badesul declined.",
+ "Asset manager":"Highest decline rate (7 of 15), mostly mandate-related. 5 of the 7 active names are still at first contact.",
+ "Family office / wealth":"Largest group. KVIV is in NDA and four are scheduling meetings (TAG, Ecoa, Brennand, Picoró); most others are at first contact.",
+ "Corporate":"Both declined: impact out of scope and timing."};
 $("profiles").innerHTML=cats.map(c=>{const L=D.filter(x=>x.cat===c),n=L.length,lv=L.filter(x=>x.st!=="X"),dx=n-lv.length,adv=L.filter(x=>B(x.s)>=4).length,br=L.filter(x=>x.br).length;
  const segs=[1,2,3,4,5].map(b=>{const q=lv.filter(x=>B(x.s)===b).length;return q?`<i style="width:${q/n*100}%;background:var(--s${b})" title="${ETAPAS[b]}: ${q}"></i>`:""}).join("")+(dx?`<i class="sx" style="width:${dx/n*100}%" title="Declined: ${dx}"></i>`:"");
  const sc={};L.forEach(x=>{const s=x.sub.toLowerCase();sc[s]=(sc[s]||0)+1});const subs=Object.entries(sc).sort((a,b)=>b[1]-a[1]).map(([s,q])=>q+" "+s).join(" · ");
@@ -395,7 +395,7 @@ const MOT=[
  ["geo","Prefer credit in developed markets","Already exposed to private debt; prefer the US or Europe."],
  ["parada","Investor's initiative on hold","Closed by Norder."],
 ];
-const PARC=[["Galapagos Capital","Private equity"]];
+const PARC=[["Galapagos Capital","Asset manager"]];
 const groups=MOT.map(([id,t,d])=>({id,t,d,L:decl.filter(x=>x.mot===id)})).filter(g=>g.L.length).sort((a,b)=>b.L.length-a.L.length);
 const dmax=Math.max(...groups.map(g=>g.L.length));
 const PARCG={id:"parc",t:"Partial declines (still active)",d:"Still active, but declined one of the fronts.",L:PARC.map(x=>({n:x[0],sub:x[1],s:D.find(y=>y.n===x[0]).s})),parc:true};
@@ -413,10 +413,10 @@ drawDecl();
 const ESP=[
  ["XP Asset","Asset manager","Meeting held","Asked to pick the conversation back up in December.","Dec 2026","Reach out again in early December."],
  ["Cadonau (Jereissati)","Single-family office","Meeting scheduled","Asked to pick it back up in December.","Dec 2026","Reach out again and reschedule the meeting."],
- ["Bradesco Asset Management","Bank asset manager","Meeting held","Interest depends on a local vehicle; open to receiving updates to present to Eco Invest.","Once the BR vehicle is defined","Send updates on the local vehicle as soon as it is defined."],
+ ["Bradesco Asset Management","Bank / asset manager","Meeting held","Interest depends on a local vehicle; open to receiving updates to present to Eco Invest.","Once the BR vehicle is defined","Send updates on the local vehicle as soon as it is defined."],
  ["Gerval (FO Gerdau)","Single-family office","Meeting held","Waiting for Deetken to decide on the vehicle, based on demand from local LPs. Last email on Oct 15.","Once the BR vehicle is defined","Go back to Letícia with the NDA and data room."],
  ["Finep","Development agency","Advanced review","No budget left for 2026, and no fast-track route available.","Next budget cycle (2027)","Check back when the 2027 budget and calls for proposals open."],
- ["ekho","Family office","Contacted","Not interested for now; asked us to reconnect at the start of next year.","Early 2027","Reach out again in early 2027."],
+ ["ekho","Multi-family office","Contacted","Not interested for now; asked us to reconnect at the start of next year.","Early 2027","Reach out again in early 2027."],
 ];
 $("esp").innerHTML=ESP.map(x=>`<tr><td class="nm"><b>${esc(x[0])}</b><small>${esc(x[1])} · ${x[2]}</small></td><td>${esc(x[3])}</td><td><span class="tag ${(x[4].startsWith("Dec")||x[4].startsWith("Early"))?"nda":(x[4]==="TBD"||x[4].startsWith("Next"))?"":"br"}">${esc(x[4])}</span><small class="rt">${esc(x[5])}</small></td></tr>`).join("");
 </script>
