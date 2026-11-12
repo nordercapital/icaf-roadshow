@@ -1,0 +1,424 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ICAF Roadshow Brazil</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500&display=swap">
+<style>
+/* Layout: blue Deetken masthead, KPI strip, funnel + profile side by side, then active pipeline list and paused/declined list */
+:root{
+  --brand:#3C5FA0; --brand-2:#4A66AC; --sky:#BBD6EE; --bright:#3498DB;
+  --bg:#F5F7F9; --surface:#FFFFFF; --fg:#1B2433; --muted:#5E6B80; --line:#DDE4EE; --track:#E7EDF5;
+  --hold:#C98A1B; --hold-bg:#FBF1DE; --neg:#B5473A; --neg-bg:#F8E4E1; --ok:#2E8B57; --ok-bg:#E1F2E8;
+  --tag-br:#0E7C66; --tag-br-bg:#DDF3EC;
+  --s1:#C3CCD8; --s2:#9DBDE3; --s3:#6B94D0; --s4:#3D61A6; --s5:#1E3870;
+  --font:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --brand:#7F9DDB; --brand-2:#3C5FA0; --sky:#2C4A75; --bright:#5DB2EA;
+  --bg:#0F1522; --surface:#172033; --fg:#E7ECF4; --muted:#9AA7BC; --line:#28344B; --track:#222E45;
+  --hold:#E8B04F; --hold-bg:#3A2E16; --neg:#E78A7D; --neg-bg:#3D1F1C; --ok:#6CC897; --ok-bg:#16352A;
+  --tag-br:#5FD3B6; --tag-br-bg:#123A33; --s1:#3A4459; --s2:#2F5A94; --s3:#4C7BC4; --s4:#7FA3E0; --s5:#C0D4F5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --brand:#7F9DDB; --brand-2:#3C5FA0; --sky:#2C4A75; --bright:#5DB2EA;
+  --bg:#0F1522; --surface:#172033; --fg:#E7ECF4; --muted:#9AA7BC; --line:#28344B; --track:#222E45;
+  --hold:#E8B04F; --hold-bg:#3A2E16; --neg:#E78A7D; --neg-bg:#3D1F1C; --ok:#6CC897; --ok-bg:#16352A;
+  --tag-br:#5FD3B6; --tag-br-bg:#123A33; --s1:#3A4459; --s2:#2F5A94; --s3:#4C7BC4; --s4:#7FA3E0; --s5:#C0D4F5; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.mast{background:radial-gradient(120% 140% at 100% 0%,#4A66AC 0%,#34508F 45%,#22386A 100%);color:#fff}
+header.mast .wrap{padding-block:44px 40px;display:flex;flex-direction:column;gap:0}
+.m-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.eyebrow{margin:0;font-family:"Space Grotesk",var(--font);font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#BBD6EE}
+header.mast img.m-dk{height:78px;width:auto;display:block}
+.mast h1{margin:22px 0 0;font-size:clamp(34px,5.4vw,60px);font-weight:700;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+.mast h1 span{color:#BBD6EE}
+.m-bars{display:flex;gap:10px;margin:28px 0 24px}
+.m-bars i{display:block;width:30px;height:4px;border-radius:2px}
+.m-bars i:nth-child(1){background:#FFFFFF}.m-bars i:nth-child(2){background:#BBD6EE}.m-bars i:nth-child(3){background:#3498DB}.m-bars i:nth-child(4){background:#7FA8E0}
+.m-lead{margin:0;max-width:780px;font-size:clamp(16px,1.9vw,20px);line-height:1.6;color:#D7E3F2}
+.m-lead b{color:#fff;font-weight:700}
+.m-nd{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:32px}
+header.mast .m-nd img{height:34px;width:auto;display:block}
+.m-nd span{font-family:"Space Grotesk",var(--font);font-size:13px;color:#B9C8DE}
+main.wrap{padding-block:28px 48px;display:flex;flex-direction:column;gap:28px}
+h2{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin:0 0 14px;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.kpi b{display:block;font-size:30px;font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi span.kt{display:block;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--fg);margin:0 0 8px;line-height:1.35}
+.kpi em.tot{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.kpi .pr{display:flex;align-items:center;gap:6px;margin-top:6px}
+.kpi .pr em{margin-top:0}
+.kpi .pr small{font-size:11.5px;color:var(--muted)}
+.kpinote{font-size:12px;color:var(--muted);margin:10px 0 0;display:flex;gap:16px;flex-wrap:wrap}
+.kpinote i{display:inline-block;width:10px;height:10px;border-radius:999px;margin-right:6px;vertical-align:-1px}
+.kpi em{display:inline-block;font-style:normal;font-size:12px;font-weight:600;color:var(--brand);background:var(--track);border-radius:999px;padding:1px 8px;margin-top:6px;font-variant-numeric:tabular-nums}
+.grid2{display:grid;grid-template-columns:1fr;gap:20px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;min-width:0}
+.panel .note{font-size:12px;color:var(--muted);margin:12px 0 0}
+.fun{display:flex;flex-direction:column;gap:9px}
+.frow{display:grid;grid-template-columns:170px 1fr 40px;gap:12px;align-items:center}
+.frow .lab{font-size:13px}
+.frow .lab small{display:block;color:var(--muted);font-size:11.5px}
+.bar{height:26px;background:var(--track);border-radius:5px;position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--brand);border-radius:5px}
+.bar i.h{background:var(--sky)}
+.frow .n{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;font-size:15px}
+.stg{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:18px}
+.stg div{border-top:3px solid var(--sky);padding-top:6px;font-size:11px;color:var(--muted);line-height:1.3}
+.stg div b{display:block;font-size:18px;color:var(--fg);font-variant-numeric:tabular-nums}
+.stg div.on{border-color:var(--brand)}
+.prof{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.pc{display:flex;flex-direction:column;gap:8px;min-width:0;padding-left:16px;border-left:1px solid var(--line)}
+.pc:first-child{padding-left:0;border-left:0}
+.pc .hd{display:flex;flex-direction:column;gap:2px}
+.pc .hd b{font-size:14px}
+.pc .hd span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.stack{display:flex;height:16px;border-radius:4px;overflow:hidden;background:var(--track)}
+.stack i{display:block;height:100%}
+.stack i+i{border-left:1px solid var(--surface)}
+.pc p{margin:0;font-size:12.5px;color:var(--fg)}
+.pc small{font-size:11.5px;color:var(--muted)}
+.prow{display:grid;grid-template-columns:150px 1fr 26px;gap:10px;align-items:center;font-size:13px}
+.prow .bar{height:18px}
+.split{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.split div{font-size:12.5px;color:var(--muted)}
+.split b{font-size:20px;color:var(--fg);display:block;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-top:12px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+/* highlight cards */
+.hl{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.hc{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.hc h3{margin:0;font-size:15px}
+.hc p{margin:0;font-size:12.5px;color:var(--muted)}
+.tags{display:flex;gap:5px;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--track);color:var(--fg);white-space:nowrap}
+.tag.br{background:var(--tag-br-bg);color:var(--tag-br)}
+.tag.co{background:var(--sky);color:var(--fg)}
+.tag.nda{background:var(--ok-bg);color:var(--ok)}
+.tag.hold{background:var(--hold-bg);color:var(--hold)}
+.tag.neg{background:var(--neg-bg);color:var(--neg)}
+/* filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.fg{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.fgl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+.fhint{font-size:12px;color:var(--muted);margin:-6px 0 12px}
+.fhint b{color:var(--fg);margin-left:6px}
+.chip{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:6px 12px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.chip:focus-visible,input:focus-visible{outline:2px solid var(--bright);outline-offset:2px}
+#q{font:inherit;font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg);min-width:0;flex:1 1 180px;max-width:260px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{text-align:left;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--surface);position:sticky;top:0}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+tr:last-child td{border-bottom:0}
+td.nm b{display:block;font-size:14px}
+td.nm small{color:var(--muted);font-size:12px}
+.st{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.pips{display:flex;gap:2px}
+.pips i{width:8px;height:8px;border-radius:2px;background:var(--track)}
+.pips i.f{background:var(--brand)}
+.st small{display:block;font-size:12px;color:var(--fg)}
+td.ns{max-width:none}
+td.dt{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}
+.empty{padding:24px;text-align:center;color:var(--muted)}
+/* hold list */
+.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;min-width:0}
+.grp h3{margin:0 0 4px;font-size:15px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.grp > p{margin:0 0 12px;font-size:12.5px;color:var(--muted)}
+.grp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.grp li{border-top:1px solid var(--line);padding-top:10px}
+.grp li b{font-size:13.5px}
+.grp li span{display:block;font-size:12.5px;color:var(--muted)}
+.sub{margin:0 0 14px;font-size:15px}
+.dpanel{display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+.dchart{display:flex;flex-direction:column;gap:12px}
+.drow{display:grid;grid-template-columns:260px 1fr 28px;gap:12px;align-items:center;font-size:13px}
+.drow b{text-align:right;font-size:15px;font-variant-numeric:tabular-nums}
+.dbar{height:22px;background:var(--track);border-radius:5px;display:flex;overflow:hidden}
+.dbar i{display:block;height:100%}.dbar i.t{background:var(--neg)}.dbar i.p{background:var(--hold)}
+.dlist{min-width:0}
+.dwrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
+button.drow{font:inherit;color:var(--fg);background:none;border:1px solid transparent;border-radius:8px;padding:6px 8px;cursor:pointer;text-align:left;width:100%}
+button.drow:hover{background:var(--track)}
+button.drow.sel{background:var(--track);border-color:var(--line)}
+button.drow.sel .lab{font-weight:700}
+button.drow:focus-visible{outline:2px solid var(--bright);outline-offset:2px}
+.dsel{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.dsel h3{margin:0 0 4px;font-size:15px;display:flex;gap:8px;align-items:center}
+.dsel ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px}
+.dsel li{border-top:1px solid var(--line);padding-top:8px;font-size:13px;display:flex;flex-direction:column;gap:2px}
+.dsel li small{color:var(--muted);font-size:12px}
+.dsel li .last{color:var(--fg)}
+.dsel .tags:empty{display:none}
+.gd{margin:0 0 8px;font-size:12px;color:var(--muted)}
+.drow.parc{margin-top:4px}
+.now{position:absolute;left:8px;top:50%;transform:translateY(-50%);background:#BBD6EE;color:#1E3870;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;white-space:nowrap;font-variant-numeric:tabular-nums;z-index:1}
+.legend i.nowk{display:inline-block;background:#BBD6EE;border-radius:999px;width:16px}
+.fb{position:relative}
+.fb i em{font-style:normal;font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;height:100%}
+.fb i.sh em{color:var(--fg);font-weight:800;font-size:13px}
+.fb i.sx em{color:var(--neg)}
+.fb{display:flex}.fb i{position:static;border-radius:0;height:100%;display:block}.fb i.sa{background:var(--brand)}.fb i.sh{background:var(--sky)}.fb i.sx{background:repeating-linear-gradient(135deg,var(--neg-bg) 0 4px,var(--line) 4px 8px)}
+.sa{background:var(--brand)}.sh{background:var(--sky)}.sx{background:repeating-linear-gradient(135deg,var(--neg-bg) 0 4px,var(--line) 4px 8px)}
+.legend i.sa,.legend i.sh,.legend i.sx{display:inline-block}
+.stg div.dx{border-color:var(--neg)}
+.tag.ft{background:var(--neg-bg);color:var(--neg)}
+.dchart{gap:4px}
+.hint{font-size:12px;color:var(--muted);margin:-8px 0 12px}
+.dg h3{margin:0 0 6px;font-size:14px;display:flex;gap:8px;align-items:center}
+.dg ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dg li{border-top:1px solid var(--line);padding-top:8px;font-size:13px}
+.dg li small{display:block;color:var(--muted);font-size:12px}
+.dg li > span:last-child{display:block;font-size:12.5px;color:var(--fg);margin-top:2px}
+.tbl.flat{border:0;border-radius:0}
+table.et{min-width:600px}
+.rt{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+@media (max-width:900px){.dpanel{grid-template-columns:1fr}}
+@media (max-width:560px){.drow{grid-template-columns:120px 1fr 20px}}
+.src{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin:0}
+footer.norder{background:#16202E;color:#C9D0DA;font-family:"Space Grotesk",var(--font)}
+footer.norder .wrap{padding-block:0}
+.nb-row{border-top:1px solid #21334F;padding-block:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap}
+.nb-l{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.nb-l img{height:38px;width:auto;display:block}
+.nb-l span,.nb-r{font-size:14px;color:#A9B2BF;letter-spacing:.01em}
+@media (max-width:700px){.logos .sep{display:none}}
+
+@media (max-width:1000px){.prof{grid-template-columns:repeat(3,1fr)}.pc:nth-child(4){padding-left:0;border-left:0}.dwrap{grid-template-columns:1fr}.stg{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.grid2,.groups{grid-template-columns:1fr}}
+@media (max-width:560px){.prof{grid-template-columns:1fr}.dsel ul{grid-template-columns:1fr}.pc{padding-left:0;border-left:0}.kpis{grid-template-columns:repeat(2,1fr)}.frow{grid-template-columns:120px 1fr 28px}.prow{grid-template-columns:110px 1fr 24px}.stg{grid-template-columns:repeat(3,1fr)}header.mast img.m-dk{height:56px}}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="m-top">
+      <p class="eyebrow">Deetken Impact · Inclusive Climate Action Fund · As of Nov 12, 2026</p>
+      <img class="m-dk" src="data:image/png;base64,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" alt="Deetken Impact">
+    </div>
+    <h1>ICAF Roadshow –<br><span>Brazil Investor Pipeline</span></h1>
+    <div class="m-nd"><img src="data:image/png;base64,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" alt="Norder Capital"><span>Capital Advisory &amp; Investor Relations · Confidential</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Summary</h2>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section class="grid2">
+    <div class="panel">
+      <h2>Conversion funnel</h2>
+      <div class="fun" id="funnel"></div>
+      <div class="legend"><span><i class="sa"></i>Active</span><span><i class="sh"></i>On hold</span><span><i class="sx"></i>Declined (<span id="dcount"></span>)</span><span><i class="nowk"></i>Names at this stage today (active or on hold)</span></div>
+      <p class="note">Bars are cumulative: each stage counts everyone who reached it or went beyond, including those who later declined. Inside each bar, the light-blue tag shows how many active or on-hold names are at that stage today; the numbers in the on-hold and declined segments count those names cumulatively, like the bar.</p>
+    </div>
+    <div class="panel">
+      <h2>Investor profile</h2>
+      <div class="prof" id="profiles"></div>
+      <div class="legend" id="plegend"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>In advanced review</h2>
+    <div class="hl" id="hl"></div>
+  </section>
+
+  <section>
+    <h2>Active names and next steps</h2>
+    <div class="filters" id="filters" role="group" aria-label="Filters"></div>
+    <p class="fhint">Combine filters: within a group, any option matches; across groups, all must match. <b id="fcount"></b></p>
+    <div class="tbl"><table>
+      <thead><tr><th>Investor</th><th>Interest and flags</th><th>Next step</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Declines and names on hold</h2>
+    <div class="panel">
+      <h3 class="sub">Declines by reason</h3><p class="hint">Click a bar to see the names.</p>
+      <div class="dwrap"><div><div id="declchart" class="dchart" role="group" aria-label="Decline reasons"></div>
+      <div class="legend"><span><i style="background:var(--neg)"></i>Full decline</span><span><i style="background:var(--hold)"></i>Partial decline (still active on another front)</span></div></div>
+      <div id="decllist" class="dlist" aria-live="polite"></div></div>
+    </div>
+    <div class="panel" style="margin-top:20px">
+      <h3 class="sub">Names on hold and follow-up timing</h3>
+      <div class="tbl flat"><table class="et"><thead><tr><th>Investor</th><th>Feedback</th><th>When we follow up</th></tr></thead><tbody id="esp"></tbody></table></div>
+    </div>
+  </section>
+</main>
+<footer class="norder"><div class="wrap"><div class="nb-row">
+  <div class="nb-l"><img src="data:image/png;base64,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" alt="Norder Capital"><span>Capital Advisory &amp; Investor Relations</span></div>
+  <div class="nb-r">São Paulo · Lisbon · London · Confidential</div>
+</div></div></footer>
+
+<script>
+const ETAPAS=["","Contacted","Initial assessment","Meeting scheduled","Meeting held","Advanced review"];
+const ETAPA_DESC=["","No feedback yet","Under review","Scheduled / being scheduled","Deetken / Norder","NDA / due diligence"];
+const B=s=>s<=1?1:s===2?2:(s===3||s===5)?3:(s===4||s===6)?4:5;
+// [name, profile, sub-profile, CRM stage, status A=active H=on hold X=declined, interest, NDA, flags, next step / feedback, decline reason]
+const RAW=[
+["Itaú Asset","Bank","Bank asset manager",7,"A","LP,Co-invest","NDA being signed","","Finalize NDA signing and open the data room. Main focus is direct co-investment; assessing an LP commitment in light of the Canadian anchor."],
+["KVIV Ventures","Asset manager","Venture capital",7,"A","LP,Co-invest","NDA under review","","Awaiting Caetano's comments on the NDA template we sent."],
+["Finep","Development / DFI","Development agency",7,"H","LP","NDA not sent","BR",""],
+["Desenvolve SP","Development / DFI","Development agency",7,"A","LP","NDA under review","BR","Apply to the call for proposals (submission end of November). NDA only after the first round, about 3 months later."],
+["BNDES","Development / DFI","Development bank",7,"A","LP,Co-invest","NDA under review","BR","New meeting with Pimpão: awaiting proposed dates."],
+["BTG Pactual","Bank","Bank",6,"A","LP,Co-invest","NDA not sent","","Re-engaging through a new route: WhatsApp sent to Luiz Medeiros (fund-of-funds team) on Nov 12."],
+["Banco do Brasil","Bank","Bank",6,"A","LP,Co-invest","NDA not sent","","Re-engaging through Victor Granja, our contact on the fund-evaluation team."],
+["Galapagos Capital","Asset manager","Private equity",6,"A","LP","NDA not sent","","LP: materials with the fund-investment team for review. Follow up with the Paraguayan partner referred for co-investment."],
+["Ecoa Capital","Family office / wealth","Single-family office",5,"A","LP","","","Meeting with Deetken on Nov 12."],
+["TAG Investimentos","Family office / wealth","Multi-family office",3,"A","LP,Co-invest","","","Meeting scheduled for Nov 12."],
+["Família Brennand","Family office / wealth","Single-family office",3,"A","LP,Co-invest","","","Awaiting Antonio Brennand's feedback to schedule."],
+["EQI Investimentos","Asset manager","Asset manager",2,"A","LP","","","Materials sent. Followed up with Ettore on WhatsApp on Nov 11; awaiting feedback."],
+["Santander Brasil","Bank","Bank",2,"A","LP","","","Materials sent. Awaiting feedback."],
+["Carpa Family Office","Family office / wealth","Multi-family office",2,"A","LP","","","Materials sent. Awaiting feedback."],
+["Picoró Investimentos","Family office / wealth","Family office",3,"A","LP,Co-invest","","","Scheduling a call with Luquinhas."],
+["Legend Capital","Asset manager","Private equity",1,"A","LP","","","Reaching out in parallel to Luiz, Túlio, Guilherme and Pedro by email."],
+["BDMG","Development / DFI","Development bank",1,"A","LP","","","First follow-up with Jorge."],
+["Enseada","Family office / wealth","Family office",1,"A","LP","","","First follow-up with João."],
+["WE Capital","Asset manager","Private equity",1,"A","LP","","","First follow-up with Caio, awaiting reply."],
+["Pragma","Family office / wealth","Multi-family office",1,"A","LP","","","Follow-up with Cella by email."],
+["Perfin","Asset manager","Asset manager",1,"A","LP","","","Reaching out to Cesar and Gaspar by email and WhatsApp."],
+["JGP","Asset manager","Asset manager",1,"A","LP","","","Reached out to Urbano and Maria, awaiting reply."],
+["Aguassanta Participações","Family office / wealth","Single-family office",1,"A","LP","","","First follow-up with Sylvio, awaiting reply."],
+["Turim FO","Family office / wealth","Multi-family office",1,"A","LP","","","First follow-up with Carol and outreach to Eduardo."],
+["M Square","Asset manager","Asset manager",1,"A","LP","","","Follow-up with Victor on WhatsApp, awaiting reply."],
+["Brainvest Brasil","Family office / wealth","Multi-family office",1,"A","LP,Co-invest","","","Follow-up with Dennis on WhatsApp, awaiting reply."],
+["Oikos Wealth Management","Family office / wealth","Multi-family office",1,"A","LP,Co-invest","","","Follow-up with Hugo on WhatsApp, awaiting reply."],
+["Portofino MFO","Family office / wealth","Multi-family office",1,"A","LP","","","Talking directly with Carolina (head), who will bring in João and the investment team."],
+["4UM Investimentos","Family office / wealth","Multi-family office",1,"A","LP","","","Reaching out to Érico by email."],
+// on hold
+["XP Asset","Asset manager","Asset manager",6,"H","LP","","",""],
+["Bradesco Asset Management","Bank","Bank asset manager",6,"H","LP,Co-invest","","BR",""],
+["Gerval (FO Gerdau)","Family office / wealth","Single-family office",6,"H","LP","","BR",""],
+["Cadonau (Jereissati)","Family office / wealth","Single-family office",5,"H","LP,Co-invest","","",""],
+["ekho","Family office / wealth","Family office",1,"H","LP,Co-invest","","",""],
+// declined
+["Maubisa","Family office / wealth","Single-family office",2,"X","LP,Co-invest","","","","timing"],
+["Pachamama Investimentos","Asset manager","Asset manager",2,"X","LP,Co-invest","","","","timing"],
+["Badesul","Development / DFI","Development agency",6,"X","LP","","FT,BR","","mandato"],
+["Jera Capital","Asset manager","Private equity",2,"X","","","","","mandato"],
+["Genial Investimentos","Asset manager","Asset manager",2,"X","","","","","mandato"],
+["Safra","Bank","Bank",2,"X","","","","","mandato"],
+["Minerva Foods","Corporate","Corporate",2,"X","","","","","impacto"],
+["UV Gestora","Family office / wealth","Single-family office",2,"X","LP","","","","geo"],
+["BWGI","Asset manager","Asset manager",2,"X","LP","","","","mandato"],
+["Anima Investimentos","Asset manager","Asset manager",2,"X","LP","","","","mandato"],
+["Monte Bravo","Family office / wealth","Investment advisory",2,"X","LP,Co-invest","","","","impacto"],
+["Spectra Investments","Asset manager","Private equity",2,"X","","","","","mandato"],
+["Nau Capital","Family office / wealth","Multi-family office",2,"X","LP,Co-invest","","","","mandato"],
+["Sun Moritz Family Office","Family office / wealth","Single-family office",2,"X","Co-invest","","","","mandato"],
+["Prada Assessoria","Family office / wealth","Investment advisory",2,"X","Co-invest","","","","impacto"],
+["Signal Capital","Asset manager","Private equity",2,"X","LP,Co-invest","","","","timing"],
+["Monte Azul MFO","Family office / wealth","Multi-family office",2,"X","LP,Co-invest","","BR","","demanda"],
+["Fundo JBS pela Amazônia","Corporate","Foundation",2,"X","LP,Co-invest","","","","timing"],
+["Globo Ventures","Corporate","Corporate venture",2,"X","LP,Co-invest","","","","timing"],
+["Península Participações","Family office / wealth","Single-family office",2,"X","LP,Co-invest","","","","impacto"],
+];
+const D=RAW.map(r=>({n:r[0],cat:r[1],sub:r[2],s:r[3],st:r[4],a:r[4]==="A",int:r[5]?r[5].split(","):[],nda:r[6],ft:r[7].includes("FT"),br:r[7].includes("BR"),next:r[8],mot:r[9]||""}));
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const active=D.filter(x=>x.st==="A"), hold=D.filter(x=>x.st==="H"), decl=D.filter(x=>x.st==="X");
+const N=D.length;
+
+// KPIs
+const k=[[N,"investors contacted"],[D.filter(x=>x.s>=2).length,"moved on to initial assessment"],[D.filter(x=>B(x.s)>=4).length,"moved on to a meeting (Deetken / Norder)"],[D.filter(x=>x.nda==="NDA being signed"||x.nda==="NDA under review").length,"moved on to NDA negotiation"],[active.length+" / "+hold.length+" / "+decl.length,"active / on hold / declined"]];
+const P=["100%"];for(let i=1;i<4;i++)P[i]=Math.round(k[i][0]/k[i-1][0]*100)+"%";
+const CAP=["of total","of previous stage","of previous stage","of previous stage","of total"];
+$("kpis").innerHTML=k.map(([v,l],i)=>`<div class="kpi"><span class="kt">${l}</span><b>${v}</b>${i===4?[[active,"active"],[hold,"on hold"],[decl,"declined"]].map(([L,lb])=>`<div class="pr"><em>${Math.round(L.length/N*100)}%</em><small>${lb} (${L.length} of ${N})</small></div>`).join(""):`<div class="pr"><em>${P[i]}</em><small>${CAP[i]}</small></div>`}${i>=1&&i<=3?`<div class="pr"><em class="tot">${Math.round(v/N*100)}%</em><small>of total</small></div>`:""}</div>`).join("");
+
+// Funnel (cumulative)
+$("funnel").innerHTML=[1,2,3,4,5].map(s=>{const c=L=>L.filter(x=>B(x.s)>=s).length;const a=c(active),h=c(hold),x=c(decl);
+ const cur=D.filter(y=>y.st!=="X"&&B(y.s)===s).length;
+ return `<div class="frow"><div class="lab">${ETAPAS[s]}<small>${ETAPA_DESC[s]}</small></div><div class="bar fb" role="img" aria-label="${ETAPAS[s]}: ${a} active, ${h} on hold, ${x} declined; ${cur} at this stage today"><span class="now">${cur}</span>${a?`<i class="sa" style="width:${a/N*100}%"></i>`:""}${h?`<i class="sh" style="width:${h/N*100}%"><em>${h}</em></i>`:""}${x?`<i class="sx" style="width:${x/N*100}%"><em>${x}</em></i>`:""}</div><div class="n">${a+h+x}</div></div>`}).join("");
+const live=D.filter(x=>x.st!=="X");$("dcount").textContent=decl.length;
+
+
+// Profiles
+const cats=["Development / DFI","Bank","Asset manager","Family office / wealth","Corporate"];
+const CATL={"Development / DFI":"Development / DFI","Bank":"Banks","Asset manager":"Asset managers","Family office / wealth":"Family offices / wealth","Corporate":"Corporates"};
+const LEIT={
+ "Development / DFI":"Most advanced profile: 3 of 5 reached advanced review. Desenvolve SP and BNDES are moving; Finep is on hold with no budget for 2026.",
+ "Bank":"4 of 6 reached a meeting. BTG and Banco do Brasil are being re-engaged through new contacts; only Safra declined. Itaú is moving through the NDA.",
+ "Asset manager":"Accounts for most mandate-related declines (5 of 9). More than half of the active names are still at first contact.",
+ "Family office / wealth":"Largest group in the roadshow, with most active names still early in the funnel.",
+ "Corporate":"All three declined: impact out of scope or timing."};
+$("profiles").innerHTML=cats.map(c=>{const L=D.filter(x=>x.cat===c),n=L.length,lv=L.filter(x=>x.st!=="X"),dx=n-lv.length,adv=L.filter(x=>B(x.s)>=4).length,br=L.filter(x=>x.br).length;
+ const segs=[1,2,3,4,5].map(b=>{const q=lv.filter(x=>B(x.s)===b).length;return q?`<i style="width:${q/n*100}%;background:var(--s${b})" title="${ETAPAS[b]}: ${q}"></i>`:""}).join("")+(dx?`<i class="sx" style="width:${dx/n*100}%" title="Declined: ${dx}"></i>`:"");
+ const sc={};L.forEach(x=>{const s=x.sub.toLowerCase();sc[s]=(sc[s]||0)+1});const subs=Object.entries(sc).sort((a,b)=>b[1]-a[1]).map(([s,q])=>q+" "+s).join(" · ");
+ return `<div class="pc"><div class="hd"><b>${CATL[c]}</b><span>${n} names · ${adv} with a meeting or beyond · ${dx} declined${br?` · ${br} ${br>1?"ask":"asks"} for a BR vehicle`:""}</span></div><div class="stack" role="img" aria-label="${CATL[c]}: breakdown by stage"><div style="display:flex;width:100%;height:100%">${segs}</div></div><p>${LEIT[c]}</p><small>${esc(subs)}</small></div>`}).join("");
+$("plegend").innerHTML=[1,2,3,4,5].map(b=>`<span><i style="background:var(--s${b})"></i>${ETAPAS[b]}</span>`).join("")+`<span><i class="sx"></i>Declined</span>`;
+
+// tags
+function tags(x){let t=x.int.map(i=>`<span class="tag ${i==="Co-invest"?"co":""}">${i}</span>`).join("");
+ if(x.br)t+=`<span class="tag br">BR vehicle</span>`;
+ if(x.ft)t+=`<span class="tag ft">Fast Track</span>`;
+ if(x.nda&&x.nda!=="NDA not sent")t+=`<span class="tag nda">${x.nda}</span>`;
+ return `<div class="tags">${t}</div>`}
+
+// Highlights
+$("hl").innerHTML=active.filter(x=>B(x.s)===5).map(x=>`<div class="hc"><h3>${esc(x.n)}</h3><p>${esc(x.sub)}</p>${tags(x)}<p style="color:var(--fg)">${esc(x.next)}</p></div>`).join("");
+
+// Filters + table
+const FG=[
+ ["Current stage",[1,2,3,4,5].map(s=>["e"+s,ETAPAS[s],x=>B(x.s)===s])],
+ ["Flags",[["br","BR vehicle",x=>x.br],["co","Co-invest",x=>x.int.includes("Co-invest")]]],
+ ["Profile",[["dfi","Development / DFI",x=>x.cat==="Development / DFI"],["bk","Banks",x=>x.cat==="Bank"],["ge","Asset managers",x=>x.cat==="Asset manager"],["fo","Family offices",x=>x.cat==="Family office / wealth"]]]];
+const sel=new Set();let q="";
+$("filters").innerHTML=`<button class="chip" data-f="all" aria-pressed="true">All active</button>`+FG.map(([g,L])=>`<span class="fg"><span class="fgl">${g}</span>`+L.map(([id,l])=>`<button class="chip" data-f="${id}" aria-pressed="false">${l}</button>`).join("")+`</span>`).join("")+`<input id="q" type="search" placeholder="Search investor" aria-label="Search investor">`;
+$("filters").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;const f=b.dataset.f;
+ if(f==="all")sel.clear();else sel.has(f)?sel.delete(f):sel.add(f);
+ document.querySelectorAll("#filters .chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.f==="all"?sel.size===0:sel.has(c.dataset.f)));render()});
+$("q").addEventListener("input",e=>{q=e.target.value.toLowerCase();render()});
+function render(){
+ const groups=FG.map(([,L])=>L.filter(([id])=>sel.has(id)).map(f=>f[2])).filter(L=>L.length);
+ const rows=active.filter(x=>groups.every(L=>L.some(fn=>fn(x)))).filter(x=>!q||x.n.toLowerCase().includes(q)).sort((a,b)=>b.s-a.s||a.n.localeCompare(b.n));
+ $("fcount").textContent=rows.length+(rows.length===1?" name":" names");
+ $("rows").innerHTML=rows.length?rows.map(x=>`<tr><td class="nm"><b>${esc(x.n)}</b><small>${esc(x.sub)}</small></td><td>${tags(x)}</td><td class="ns">${esc(x.next)}</td></tr>`).join(""):`<tr><td colspan="3" class="empty">No active names match this combination of filters.</td></tr>`}
+render();
+
+// Declines
+const MOT=[
+ ["mandato","Outside current mandate / strategy","Asset class, stage or format outside what they invest in today."],
+ ["sem","Reason not disclosed","Declined without a formal reason."],
+ ["impacto","Impact out of scope","Do not invest in impact funds, or only look at larger managers."],
+ ["timing","Timing / other priorities","No team bandwidth or focus on the asset class right now, or no reply after follow-ups."],
+ ["demanda","No demand for the fund","Do not plan to become LPs at this time."],
+ ["geo","Prefer credit in developed markets","Already exposed to private debt; prefer the US or Europe."],
+ ["parada","Investor's initiative on hold","Closed by Norder."],
+];
+const PARC=[["Galapagos Capital","Private equity"]];
+const groups=MOT.map(([id,t,d])=>({id,t,d,L:decl.filter(x=>x.mot===id)})).filter(g=>g.L.length).sort((a,b)=>b.L.length-a.L.length);
+const dmax=Math.max(...groups.map(g=>g.L.length));
+const PARCG={id:"parc",t:"Partial declines (still active)",d:"Still active, but declined one of the fronts.",L:PARC.map(x=>({n:x[0],sub:x[1],s:D.find(y=>y.n===x[0]).s})),parc:true};
+const ALLG=[...groups,PARCG];
+let selG=groups[0].id;
+function drawDecl(){
+ $("declchart").innerHTML=ALLG.map(g=>`<button type="button" class="drow${g.parc?" parc":""}${g.id===selG?" sel":""}" data-g="${g.id}" aria-pressed="${g.id===selG}"><span class="lab">${g.t}</span><span class="dbar"><i class="${g.parc?"p":"t"}" style="width:${g.L.length/dmax*100}%"></i></span><b>${g.L.length}</b></button>`).join("");
+ const g=ALLG.find(x=>x.id===selG);
+ $("decllist").innerHTML=`<div class="dsel"><h3>${g.t} <span class="tag ${g.parc?"hold":"neg"}">${g.L.length}</span></h3><p class="gd">${g.d}</p><ul>${g.L.map(x=>`<li><b>${esc(x.n)}</b><span class="tags">${x.ft?'<span class="tag ft">Fast Track</span>':''}${x.br?'<span class="tag br">BR vehicle</span>':''}</span><small>${esc(x.sub)}</small><small class="last">${ETAPAS[B(x.s)]}</small></li>`).join("")}</ul></div>`;
+}
+$("declchart").addEventListener("click",e=>{const b=e.target.closest(".drow");if(!b)return;selG=b.dataset.g;drawDecl()});
+drawDecl();
+
+// On hold
+const ESP=[
+ ["XP Asset","Asset manager","Meeting held","Asked to pick the conversation back up in December.","Dec 2026","Reach out again in early December."],
+ ["Cadonau (Jereissati)","Single-family office","Meeting scheduled","Asked to pick it back up in December.","Dec 2026","Reach out again and reschedule the meeting."],
+ ["Bradesco Asset Management","Bank asset manager","Meeting held","Interest depends on a local vehicle; open to receiving updates to present to Eco Invest.","Once the BR vehicle is defined","Send updates on the local vehicle as soon as it is defined."],
+ ["Gerval (FO Gerdau)","Single-family office","Meeting held","Waiting for Deetken to decide on the vehicle, based on demand from local LPs. Last email on Oct 15.","Once the BR vehicle is defined","Go back to Letícia with the NDA and data room."],
+ ["Finep","Development agency","Advanced review","No budget left for 2026, and no fast-track route available.","Next budget cycle (2027)","Check back when the 2027 budget and calls for proposals open."],
+ ["ekho","Family office","Contacted","Not interested for now; asked us to reconnect at the start of next year.","Early 2027","Reach out again in early 2027."],
+];
+$("esp").innerHTML=ESP.map(x=>`<tr><td class="nm"><b>${esc(x[0])}</b><small>${esc(x[1])} · ${x[2]}</small></td><td>${esc(x[3])}</td><td><span class="tag ${(x[4].startsWith("Dec")||x[4].startsWith("Early"))?"nda":(x[4]==="TBD"||x[4].startsWith("Next"))?"":"br"}">${esc(x[4])}</span><small class="rt">${esc(x[5])}</small></td></tr>`).join("");
+</script>
+
+</body></html>
